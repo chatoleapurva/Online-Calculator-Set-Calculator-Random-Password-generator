@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discrete Mathematics</title>
+    <link rel="stylesheet" href="main_page.css">
+  </head>
+  <body>
+    
+    <script>
+      let name = prompt("Please enter your name:");
+
+      function goToPage() {
+        let selectedOption = document.getElementById("options").value;
+        if (selectedOption === "password") {
+          window.location.href = "password.html";
+        } else if (selectedOption === "matrix") {
+          window.location.href = "matrix.html";
+        }else if (selectedOption === "Set Operations") {
+          window.location.href = "set_operations.html";
+        }else if (selectedOption === "About Us") {
+          window.location.href = "about_us.html";
+        }
+      }
+    </script>
+    <!-- <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        
+      }
+      p{
+        font-size: 30px;
+      }
+      h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 45px;
+      }
+      
+    </style> -->
+    <h1>Welcome, <span id="name"></span>!</h1>
+    <p1>
+      We are pleased to show you our Discrete Mathematics Project :
+    </p1><br><br>
+    <p2>
+      The Group members of this project are :
+    </p2><br><br>
+    <p3>1. Apurva Singh Chatole - Content Writer<br></p3>
+    <p4>2. Vaibhav Tiwari - Programmer<br></p4>
+    <p4>3. Mansi More - Mathematics Concept<br></p4>
+    <p4>4. Pallavi Verma - Content Writer<br></p4>
+    <p4>5. Ranpura Shivam - Programmer<br></p4>
+    <p>Please select an option below to Proceed Further :</p>
+    <select id="options">
+      <option value="password">Password Generator</option>
+      <option value="matrix">Matrix Calculator</option>
+      <option value="Set Operations">Set Operations</option>
+      <option value="About Us">About Us</option>
+    </select>
+    <button onclick="goToPage()">Go</button>
+    <script>
+      document.getElementById("name").textContent = name;
+    </script>
+  </body>
+
+  <!-- Footer code for the privacy policy and terms and condition and Copyright infringment -->
+  <footer>
+    <div style="display:flex; justify-content: space-between; align-items: center;">
+      <div>
+        <ul style="display:flex; list-style:none;">
+          <li class="privacy" style="margin-right: 20px;"><a href="Privacy_Policy.pdf" target="_blank" style="font-size: 16px; color: #333;">Privacy Policy</a></li>
+          <li class="terms"><a href="Terms_of_Use.pdf" target="_blank" style="font-size: 16px; color: #333;">Terms of Use</a></li>
+        </ul>
+      </div>
+      <p4 class="privacy terms" style="text-align:center;"><a href="#" id="copyright"
+      style="color: #6612cc;">&copy; 2023 Discrete Delights. All rights reserved.</a></p4>
+    </div>
+  </footer>
+  
+  
+
+  <!-- <div class="options-container">
+    <div id="privacy-policy-option">Privacy Policy</div>
+    <div id="terms-condition-option">Terms and Conditions</div>
+  </div>
+  
+  <style>
+    .options-container {
+      text-align: center;
+    }
+  
+    .options-container > div {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  </style> -->
+  
+  <!-- Dialog box for copyright information -
+  <div id="copyright-dialog" style="display: none;">
+    <p>Insert your copyright information here.</p>
+    <button id="close-copyright-dialog">Close</button>
+  </div>
+  
+  <!-- Dialog box for privacy policy -->
+  <!-- <div id="privacy-dialog" style="display: none;">
+    <object data="Privacy_Policy.pdf" type="application/pdf" width="100%" height="500">
+      <p>Privacy Policy:
+
+        We collect personal information such as your name and email address only if you choose to provide it to us.
+        
+        We do not sell, rent, or share your personal information with third parties except as required by law.
+        
+        We use cookies and similar technologies to enhance your user experience and to track usage of our website.
+        
+        We may use your personal information to send you promotional materials about our products and services.
+        
+        We take reasonable steps to protect your personal information from unauthorised access, use, or disclosure.
+        
+        You may request access to, correction of, or deletion of your personal information by contacting us through the contact form on our website.
+        
+        We reserve the right to modify or update this privacy policy at any time without notice.
+
+        Terms of Use:
+
+        By using our Matrix calculator and password generator, you agree to these terms of use. If you do not agree to these terms, you should not use our website.
+
+        Our Matrix calculator and password generator are provided for educational and informational purposes only. We do not guarantee the accuracy or completeness of the results.
+
+        You may not use our Matrix calculator or password generator for any illegal or unauthorised purpose. You may not attempt to access or modify our website's source code or interfere with the proper functioning of the website.
+
+        Our website may contain links to third-party websites. We are not responsible for the content or privacy policies of these websites.
+
+        We reserve the right to modify or discontinue our Matrix calculator or password generator at any time without notice.
+
+        By using our website, you agree to indemnify and hold us harmless from any and all claims, damages, or expenses arising from your use of the website.
+        </p>
+    </object>
+    <button id="close-privacy-dialog">Close</button>
+  </div>
+  
+   <!-- Dialog box for terms of use  
+  <div id="terms-dialog" style="display: none;">
+    <object data="Terms_of_Use.pdf" type="application/pdf" width="100%" height="500">
+      <p>Terms and Conditions:
+
+        By using the Matrix calculator and password generator on our website, you agree to these terms and conditions. If you do not agree to these terms, you should not use our website.
+        
+        Our Matrix calculator and password generator are provided for informational purposes only. We do not guarantee the accuracy or completeness of the results generated by our tools.
+        
+        You may not use our Matrix calculator or password generator for any illegal or unauthorized purpose. You may not attempt to access or modify our website's source code or interfere with the proper functioning of the website.
+        
+        Our website may contain links to third-party websites. We are not responsible for the content or privacy policies of these websites.
+        
+        We reserve the right to modify or discontinue our Matrix calculator or password generator at any time without notice.
+        
+        You acknowledge that the use of the Matrix calculator and password generator is at your own risk. We are not responsible for any damages or losses resulting from your use of our website.
+        
+        Our website may use cookies and similar technologies to enhance your user experience and to track usage of our website.
+        
+        We may collect personal information such as your name and email address if you choose to provide it to us. We take reasonable steps to protect your personal information from unauthorized access, use, or disclosure.
+        
+        We may use your personal information to send you promotional materials about our products and services.
+        
+        You may request access to, correction of, or deletion of your personal information by contacting us through the contact form on our website.
+        
+        We reserve the right to modify or update these terms and conditions at any time without notice
+        </p>
+    </object>
+    <button id="close-terms-dialog">Close</button>
+  </div>
+
+  <!-- Code for close buttons of the dialog boxes
+<button id="close-privacy-dialog">Close</button>
+<button id="close-terms-dialog">Close</button>
+<button id="close-copyright-dialog">Close</button> 
+  
+  <script>
+
+    var activeDialog = null;
+
+    function openDialog(dialogId) {
+      if (activeDialog) {
+        activeDialog.style.display = 'none';
+        }
+        activeDialog = document.getElementById(dialogId);
+        activeDialog.style.display = 'block';
+      }
+
+      document.getElementById('privacy-button').addEventListener('click', function() {
+      openDialog('privacy-dialog');
+      });
+
+      document.getElementById('terms-button').addEventListener('click', function() {
+      openDialog('terms-dialog');
+      });
+
+    // Function to display the copyright dialog box
+      document.getElementById("copyright")
+        .addEventListener("click", function() {
+          document.getElementById("copyright-dialog")
+          .style.display = "block";
+      });
+  
+    // Function to close the dialog boxes
+    document.getElementById("close-copyright-dialog")
+      .addEventListener("click", function() {
+        document.getElementById("copyright-dialog")
+          .style.display = "none";
+      });
+  
+    document.getElementById("close-privacy-dialog")
+      .addEventListener("click", function() {
+        document.getElementById("privacy-dialog")
+          .style.display = "none";
+      });
+  
+    document.getElementById("close-terms-dialog")
+      .addEventListener("click", function() {
+        document.getElementById("terms-dialog")
+          .style.display = "none";
+      });
+  
+    // Function to display the privacy policy dialog box
+    document.querySelector("footer ul li:first-child a")
+      .addEventListener("click", function(event) {
+        event.preventDefault();
+        document.getElementById("privacy-dialog")
+          .style.display = "block";
+      });
+  
+    // Function to display the terms of use dialog box
+    document.querySelector("footer ul li:last-child a")
+      .addEventListener("click", function(event) {
+        event.preventDefault();
+        document.getElementById("terms-dialog")
+          .style.display = "block";
+      });
+  </script> -->
+  
+  
+  <!-- <iframe src="calculator.html" width="350" height="480"></iframe> -->
+</html>

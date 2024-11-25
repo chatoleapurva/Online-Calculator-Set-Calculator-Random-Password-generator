@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix Calculator</title>
+    <script src="matrix.js"></script>
+    <link rel="stylesheet" href="matrix.css">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- <header>
+    <div class="btn-container">
+        <button class="btn">Home</button>
+        <button class="btn">About Us</button>
+        <button class="btn">Password Generator</button>
+      </div> 
+        <div class="nav">
+          <a href="home.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="password-generator.html">Password Generator</a>
+        </div>
+      </div>
+              
+</header>
+
+<style>
+.home-link a:hover {
+    border-radius: 45px;
+    border-width: 50px;
+    border-top: 30px;
+    background-color: rgba(0, 255, 200, 0.443);
+    color: rgb(255, 255, 255);
+    }
+.matrix-link a:hover {
+    border-radius: 45px;
+    border-width: 50px;
+    border-top: 30px;
+    background-color: rgba(0, 255, 200, 0.443);
+    color: rgb(255, 255, 255);
+    }
+.About_us-link a:hover {
+    border-radius: 45px;
+    border-width: 50px;
+    border-top: 30px;
+    background-color: rgba(0, 255, 200, 0.443);
+    color: rgb(255, 255, 255);
+    }
+</style> -->
+    <section id="banner">
+    <p>Matrix Calculator<hr></p>
+    <div id="upper">
+        <div id="matrix1" class="parent">
+            <h1 class="title">Matrix A</h1>
+            <input type="number" class="m1r1" value="0"/>
+            <input type="number" class="m1r1" value="0"/>
+            <input type="number" class="m1r1" value="0"/>
+            <input type="number" class="m1r2" value="0"/>
+            <input type="number" class="m1r2" value="0"/>
+            <input type="number" class="m1r2" value="0"/>
+            <input type="number" class="m1r3" value="0"/>
+            <input type="number" class="m1r3" value="0"/>
+            <input type="number" class="m1r3" value="0"/>
+            <div class="functions">
+                <input type="button" class="function" value="Determinant(A)" onclick="mc.calDeterminantA()"/>
+                <input type="button" class="function" value="Transpose(A)" onclick="mc.transposeMatrixA()"/>
+                <input type="button" class="function" value="Rank(A)" onclick="mc.calRankA()"/>
+                
+                
+            </div>
+        </div>
+        <div id="operations">
+            <input class="operation" type="button" value="A + B" onclick="mc.addMatrix()"/>
+            <input class="operation" type="button" value="A - B" onclick="mc.subtractMatrix()"/>
+            <input class="operation" type="button" value="A &times B" onclick="mc.multiplyMatrix()"/>
+            <input type="button" class="operation" value="Clear" onclick="mc.clear()"/>
+        </div>
+        <div id="matrix2" class="parent">
+                <h1 class="title">Matrix B</h1>
+                <input type="number" class="m2r1" value="0"/>
+                <input type="number" class="m2r1" value="0"/>
+                <input type="number" class="m2r1" value="0"/>
+                <input type="number" class="m2r2" value="0"/>
+                <input type="number" class="m2r2" value="0"/>
+                <input type="number" class="m2r2" value="0"/>
+                <input type="number" class="m2r3" value="0"/>
+                <input type="number" class="m2r3" value="0"/>
+                <input type="number" class="m2r3" value="0"/>
+                <div class="functions">
+                <input type="button" class="function" value="Determinant(B)" onclick="mc.calDeterminantB()"/>
+                <input type="button" class="function" value="Transpose(B)" onclick="mc.transposeMatrixB()"/>
+                <input type="button" class="function" value="Rank(B)" onclick="mc.calRankB()"/>
+                
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="lower">
+        
+        <textarea wrap="soft" id="console" cols="20" rows="10" disabled>Result:</textarea>
+    </div>
+
+</section>
+</body>
+<footer>
+    <div style="display:flex; justify-content: space-between; align-items: center;">
+      <div>
+        <ul style="display:flex; list-style:none;">
+          <li class="privacy" style="margin-right: 20px;"><a href="Privacy_Policy.pdf" target="_blank" style="font-size: 16px; color: #333;">Privacy Policy</a></li>
+          <li class="terms"><a href="Terms_of_Use.pdf" target="_blank" style="font-size: 16px; color: #333;">Terms of Use</a></li>
+        </ul>
+      </div>
+      <p4 class="privacy terms" style="text-align:center;"><a href="#" id="copyright"
+      style="color: #6612cc;">&copy; 2023 Discrete Delights. All rights reserved.</a></p4>
+    </div>
+  </footer>
+<iframe src="calculator.html" width="350" height="480"></iframe>
+</html>

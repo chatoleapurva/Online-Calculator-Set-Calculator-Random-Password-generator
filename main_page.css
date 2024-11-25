@@ -1,0 +1,174 @@
+/* Style the body */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center; 
+    background-color: #b56161;
+    background-image: url(web1st.jpg);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 37px;
+  }
+  
+  /* Style the heading */
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #ecca65;
+  }
+
+  /* h1:hover{
+    border-width: 10px;
+    border-radius: 50px;
+    background-color: #4caf81;
+  } */
+
+  option{
+    font-size: 40px;
+  }
+  p1 {
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: rgb(67, 196, 162);
+    scrollbar-highlight-color: #ffffff;
+  }
+  p2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(67, 196, 162);
+  }
+  p3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+  }
+  p3:hover{
+    background-color: #65ecbf72;
+    border-width: 40px;
+    border-radius: 10px;
+  }
+  p4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+  }
+  p4:hover{
+    background-color: #65ecbf72;
+    border-width: 100px;
+    border-radius: 30px;
+  }
+  /* Style the select element */
+  select {
+    font-size: 17px;
+    padding: 8px;
+    border: rgb(57, 28, 203);
+    border-radius: 10px;
+    background-color: #75bbd2;
+  }
+  
+  /* Style the button */
+  button {
+    font-size: 16px;
+    padding: 8px;
+    border: black;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #51c655;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  /* Style the button on hover */
+  button:hover {
+    background-color: #e4e97d;
+  }
+  iframe {
+    position: absolute;
+			left: 0;
+      top: 274px; /* adjust this value to position the calculator vertically */
+			width: 225px; /* adjust this value to match the width of your calculator */
+			height: 357px;} 
+  
+  Style the container 
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 16px;
+    background-color: #854141;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  login form
+.login-form {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+}
+
+login form inputs 
+.login-form input[type=text], .login-form input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  font-size: 18px;
+}
+
+login form button
+.login-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+login form button hover 
+.login-form button:hover {
+  opacity: 0.8;
+}
+
+signup form *
+.signup-form {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+}
+
+signup form inputs 
+.signup-form input[type=text], .signup-form input[type=password], .signup-form input[type=email] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  font-size: 18px;
+}
+
+signup form button 
+.signup-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+ signup form button hover 
+.signup-form button:hover {
+  opacity: 0.8;
+}

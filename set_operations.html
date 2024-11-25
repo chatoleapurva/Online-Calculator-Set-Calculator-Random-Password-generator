@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Set Operation Calculator</title> 
+   <header>
+    <nav style="float: right;">
+        <ul>
+            <li class="home-link"><a href="Main.html">Home</a></li>
+            <li class="matrix-link"><a href="matrix.html">Matrix</a></li>
+            <li class="About_us-link"><a href="about_us.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+  
+  <style>
+/* Set the font family for the whole page */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Set the background image for the body */
+body {
+  background-image: url(set\ d.jpg);
+  background-size: cover;
+}
+
+/* Style the header */
+header {
+  background-color: #c03c3c;
+  color: #fff;
+  padding: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Style the navigation menu */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: ;
+  color: #fff;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+/* Style the label for input elements */
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style the text input and select elements */
+input[type=text], select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 10px ;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the button element */
+button {
+  background-color: #4ba74e;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style the textarea element */
+textarea {
+  width: 50%;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+/* Change the button background color on hover */
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Change the navigation menu style for small screens */
+@media screen and (max-width: 600px) {
+  nav li {
+    float: none;
+  }
+  nav li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+  </style>
+
+  <script>
+    function generateResult() {
+      let set1 = document.getElementById("set1").value.split(",");
+      let set2 = document.getElementById("set2").value.split(",");
+      let setType = document.getElementById("setType").value;
+      let operation = document.getElementById("operation").value;
+      let result = new Set();
+
+      if (setType === "integer") {
+        set1 = set1.map(Number);
+        set2 = set2.map(Number);
+      }
+
+      if (operation === "union") {
+        result = new Set([...set1, ...set2]);
+      } else if (operation === "intersection") {
+        for (let elem of set1) {
+          if (set2.includes(elem)) {
+            result.add(elem);
+          }
+        }
+      } else if (operation === "difference") {
+        result = new Set(set1.filter(x => !set2.includes(x)));
+      } else if (operation === "complement") {
+        let universe = new Set();
+        if (setType === "integer") {
+          for (let i = -100; i <= 100; i++) {
+            universe.add(i);
+          }
+        } else if (setType === "character") {
+          for (let i = 65; i <= 90; i++) {
+            universe.add(String.fromCharCode(i));
+          }
+        } else if (setType === "real") {
+          for (let i = -10; i <= 10; i += 0.1) {
+            universe.add(parseFloat(i.toFixed(1)));
+          }
+        }
+        result = new Set([...universe].filter(x => !set1.includes(x)));
+      } else if (operation === "cartesian") {
+        for (let elem1 of set1) {
+          for (let elem2 of set2) {
+            result.add(`(${elem1}, ${elem2})`);
+          }
+        }
+      }
+
+      document.getElementById("result").value = Array.from(result).join(", ");
+    }
+  </script>
+</head>
+<body>
+  <label for="set1">Set 1:</label>
+  <input type="text" id="set1" name="set1">
+  <br><br>
+  <label for="set2">Set 2:</label>
+  <input type="text" id="set2" name="set2">
+  <br><br>
+  <label for="setType">Select Type of Set:</label>
+  <select id="setType" name="setType">
+    <option value="integer">Integer</option>
+    <option value="character">Character</option>
+    <option value="real">Real Number</option>
+  </select>
+  <br><br>
+  <label for="operation">Select Operation:</label>
+  <select id="operation" name="operation">
+    <option value="union">Set Union</option>
+    <option value="intersection">Set Intersection</option>
+    <option value="difference">Set Difference</option>
+    <option value="complement">Complement of Set</option>
+    <option value="cartesian">Cartesian Product</option>
+  </select>
+  <br><br>
+  <button onclick="generateResult()">Generate Result</button>
+  <br><br>
+  <label for="result">Result:</label>
+  <textarea id="result" name="result" rows="5" cols="50" readonly></textarea>
+</body>
+</html>
